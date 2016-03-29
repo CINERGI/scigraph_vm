@@ -30,7 +30,8 @@ Vagrant.configure(2) do |config|
     os.server_name = "SciGraphBox"
     os.flavor = "m1.medium"
     os.image = "Ubuntu 14.04 LTS x86_64"
-    os.floating_ip_pool = "ext-net"
+    #os.floating_ip_pool = "ext-net"
+	os.floating_ip=132.249.238.138
     #os.networks = "cinergi_network"
     os.keypair_name = "cinergi_2016"
     os.security_groups = ["default"]
