@@ -27,7 +27,7 @@ Vagrant.configure(2) do |config|
     os.tenant_name = "#{ENV['OS_TENANT_NAME']}"
  
     # Specify instance information
-    os.server_name = "SciGraph  Box"
+    os.server_name = "SciGraphBox"
     os.flavor = "m1.medium"
     os.image = "Ubuntu 14.04 LTS x86_64"
     os.floating_ip_pool = "ext-net"
@@ -49,7 +49,9 @@ Vagrant.configure(2) do |config|
 
      sudo add-apt-repository ppa:openjdk-r/ppa
      sudo apt-get update
-     sudo apt-get install -y maven git openjdk-8-jdk xvfb
+     sudo apt-get install -y  openjdk-8-jdk xvfb
+	 update-java-alternatives -s java-1.8.0-openjdk-amd64
+	 sudo apt-get install -y maven git 
      echo "export DISPLAY=localhost:99" >> .profile
      Xvfb :99 &
      wget –q -o /dev/null https://github.com/OpenRefine/OpenRefine/releases/download/2.5/google-refine-2.5-r2407.tar.gz
@@ -75,6 +77,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "file",  run: "always", source: "./startServices.sh", destination: "startServices.sh"
 
   $shell2 = <<-SHELL2
+		chmod +x runScigraph.sh buildCinergiOntology.sh startServices.sh
 	     export MAVEN_OPTS='-server -d64 -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+AggressiveOpts -XX:+UseFastAccessorMethods -XX:+UseBiasedLocking -XX:NewRatio=2 -Xms4G -Xmx4G -XX:-ReduceInitialCardMarks'
 		 cd SciGraph/SciGraph-core
 		 mvn exec:java --quiet -Dexec.mainClass="edu.sdsc.scigraph.owlapi.loader.BatchOwlLoader" -Dexec.args="-c ../../resources/cinergiExample.yml"     

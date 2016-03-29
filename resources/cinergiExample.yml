@@ -48,14 +48,14 @@ categories:
     http://www.vocabularyserver.com/usgs/index.php?tema=1651&/tectonic-processes : tectonic process
     http://purl.obolibrary.org/obo/ENVO_00000063 : Water body
     http://semanticscience.org/resource/SIO_000140 : web service
-    http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Role/originator : Resource originator
+#    http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/Role/originator : Resource originator
     http://www.vocabularyserver.com/usgs/index.php?tema=1458/sciences : Science Domain
     http://purl.obolibrary.org/obo/BFO_0000015 : Process
     http://purl.obolibrary.org/obo/BFO_0000040 : Material entity
     http://purl.obolibrary.org/obo/RO_0001015 : Location
-    http://def.seegrid.csiro.au/isotc211/iso19108/2002/temporal#Period : Temporal Period
+#    http://def.seegrid.csiro.au/isotc211/iso19108/2002/temporal#Period : Temporal Period
     http://purl.bioontology.org/ontology/MESH/D006802 : Human activity
-    http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#featureOfInterest : Feature of interest
+#    http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#featureOfInterest : Feature of interest
     http://hydro10.sdsc.edu/cinergi_ontology/cinergi#namedProperty : Observed Property
     http://purl.org/NET/c4dm/event.owl#Event : Event
     http://sweet.jpl.nasa.gov/2.3/matrInstrument.owl#Instrument : Instrument
