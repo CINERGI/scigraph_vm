@@ -28,7 +28,7 @@ Vagrant.configure(2) do |config|
     os.tenant_name = "#{ENV['OS_TENANT_NAME']}"
  
     # Specify instance information
-    os.server_name = "SciGraph  Box"
+    os.server_name = "SciGraphIo"
     os.flavor = "m1.medium"
     os.image = "Ubuntu 14.04 LTS x86_64"
     os.floating_ip_pool = "ext-net"
